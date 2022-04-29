@@ -1,1 +1,1 @@
-/* Add Author and Project Details here */
+Rim Msalmi, First assignement in the course Introduction to Embedded Systems Software and Development Environments
