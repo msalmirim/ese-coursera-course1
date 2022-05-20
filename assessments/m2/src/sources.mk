@@ -10,8 +10,21 @@
 #*****************************************************************************
 
 # Add your Source files to this variable
-SOURCES =
+SOURCES = ./main.c \
+		  ./memory.c 
 
 # Add your include paths to this variable
-INCLUDES = 
+INCLUDES = -I../include/common/ \
+
+ifeq ($(PLATEFORM), HOST)
+	INCLUDES +=  -I../include/CMSIS/
+else
+	INCLUDES +=  -I../include/msp432/
+endif
+
+ifeq ($(PLATEFORM), MSP432)
+	SOURCES += ./startup_msp432p401r_gcc.c
+	SOURCES += ./interrupts_msp432p401r_gcc.c
+	SOURCES += ./system_msp432p401r.c
+endif
 

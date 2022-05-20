@@ -109,7 +109,7 @@ void sort_array(unsigned char* Table, unsigned int size)
 	int n = 0;
 	int j = 0;
 	int val = 0;
-	int pos;
+
 	while (n < size)
 	{
 		n = n * 3 + 1;
